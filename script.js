@@ -20,4 +20,14 @@ function addBookToLibrary(form) {
     var readInput = form.status.value;
     const usersBook = new book(authorInput, titleinput, pagesInput, readInput);
     myLibrary.push(usersBook);
+    //TODO: readInput value is always "on"
+}
+
+function displayBooks (myLibrary) {
+    if (myLibrary.length < 1) {
+        return;
+    }
+    else {
+        
+    }
 }

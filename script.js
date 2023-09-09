@@ -12,7 +12,7 @@ function addBookToLibrary(form) {
     let titleInput = form.title.value;
     let pagesInput = form.pages.value;
     let readInput = form.status.value;
-    const usersBook = new Book(authorInput, titleInput, pagesInput, readInput);
+    const usersBook = new Book(titleInput, authorInput, pagesInput, readInput);
     myLibrary.push(usersBook);
     displayBooks();
     //TODO: readInput value is always "on"

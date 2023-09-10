@@ -1,28 +1,48 @@
 const myLibrary = [];
 
 function Book(title, author, pages, read) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
 }
 
-function addBookToLibrary(form) {
+function buttons() {
+    const dialog = document.getElementById('dialog');
+    const addBookButton = document.getElementById('addBook');
+
+    addBookButton.addEventListener("click", () => {
+        dialog.showModal();
+    });
+
+    const submitButton = document.getElementById('submitForm');
+    submitButton.addEventListener("click", () => {
+        addBookToLibrary();
+        dialog.close(); // Close the dialog after adding a book
+    });
+}
+
+buttons();
+
+function addBookToLibrary() {
+    const form = document.forms['form'];
     let authorInput = form.author.value;
     let titleInput = form.title.value;
     let pagesInput = form.pages.value;
     let readInput = form.status.value;
     const usersBook = new Book(titleInput, authorInput, pagesInput, readInput);
     myLibrary.push(usersBook);
+
+    // Reset form
+    document.forms['form'].reset();
     displayBooks();
-    //TODO: readInput value is always "on"
 }
 
-function displayBooks () {
+function displayBooks() {
     if (myLibrary.length < 1) {
         return;
     }
-    
+
     let tbody = document.querySelector('tbody');
     // Clear the table before re-populating it
     tbody.innerHTML = '';
@@ -37,5 +57,3 @@ function displayBooks () {
         }
     }
 }
-
-const dialog = document.getElementById('dialog');

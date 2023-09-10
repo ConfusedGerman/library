@@ -54,6 +54,9 @@ function displayBooks() {
     for (let book of myLibrary) {
         let row = tbody.insertRow();
         for (let key in book) {
+            if (key === "number") {
+                continue;
+            }
             if (book.hasOwnProperty(key)) {
                 let cell = row.insertCell();
                 cell.appendChild(document.createTextNode(book[key]));

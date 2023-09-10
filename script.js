@@ -37,3 +37,5 @@ function displayBooks () {
         }
     }
 }
+
+const dialog = document.getElementById('dialog');

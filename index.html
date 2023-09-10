@@ -8,23 +8,25 @@
     <title>Library</title>
 </head>
 <body>
-    <form name="form" action="javascript:addBookToLibrary(form)" method="post">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title">
-
-        <label for="authorName">Author name:</label>
-        <input type="text" id="authorName" name="author">
-
-        <label for="pages">Pages:</label>
-        <input type="number" id="pages" name="pages">
-
-        <label for="read">Read</label>
-        <input type="radio" id="read" value="read" name="status">
-        <label for="notread">Not read</label>
-        <input type="radio" id="notread" value="Not read" name="status">
-
-        <button type="submit">Submit</button>
-    </form>
+    <dialog open>
+        <form name="form" action="javascript:addBookToLibrary(form)" method="post">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title">
+    
+            <label for="authorName">Author name:</label>
+            <input type="text" id="authorName" name="author">
+    
+            <label for="pages">Pages:</label>
+            <input type="number" id="pages" name="pages">
+    
+            <label for="read">Read</label>
+            <input type="radio" id="read" value="read" name="status">
+            <label for="notread">Not read</label>
+            <input type="radio" id="notread" value="Not read" name="status">
+    
+            <button formmethod="dialog" type="submit">Submit</button>
+        </form>
+    </dialog>
     
     <table>
         <thead>

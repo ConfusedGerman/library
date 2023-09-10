@@ -66,6 +66,7 @@ function displayBooks() {
         var btn = document.createElement('button')
         btn.className = "btn";
         btn.innerText = "Delete";
+        btn.setAttribute('data-book-number', book.number);
         cell.appendChild(btn);
     }
 }

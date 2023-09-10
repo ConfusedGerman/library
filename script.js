@@ -1,11 +1,12 @@
 const myLibrary = [];
-const bookCounter = 0;
+var bookCounter = 0;
 
-function Book(title, author, pages, read) {
+function Book(title, author, pages, read, number) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
+    this.number = number;
 }
 
 function buttons() {
@@ -31,7 +32,9 @@ function addBookToLibrary() {
     let titleInput = form.title.value;
     let pagesInput = form.pages.value;
     let readInput = form.status.value;
-    const usersBook = new Book(titleInput, authorInput, pagesInput, readInput);
+    let number = bookCounter;
+    bookCounter += 1;
+    const usersBook = new Book(titleInput, authorInput, pagesInput, readInput, number);
     myLibrary.push(usersBook);
 
     // Reset form

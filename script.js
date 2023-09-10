@@ -68,6 +68,12 @@ function displayBooks() {
         btn.innerText = "Delete";
         btn.setAttribute('data-book-number', book.number);
         cell.appendChild(btn);
+
+        //If button is clicked remove array element at the positon, in other words delete book
+        btn.addEventListener('click', () => {
+            let n = btn.getAttribute('data-book-numer');
+            const remove = myLibrary.splice(n, 1);
+        })
     }
 }
 

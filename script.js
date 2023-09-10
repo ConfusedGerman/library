@@ -55,5 +55,12 @@ function displayBooks() {
                 cell.appendChild(document.createTextNode(book[key]));
             }
         }
+        let cell = row.insertCell();
+        var btn = document.createElement('button')
+        btn.className = "btn";
+        cell.appendChild(btn);
     }
 }
+
+//remove array object via its positon by using the position-number as data-attribute on dinamically created buttons
+//I think it is allowed to assume that the array is empty at the start

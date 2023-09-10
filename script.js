@@ -58,6 +58,7 @@ function displayBooks() {
         let cell = row.insertCell();
         var btn = document.createElement('button')
         btn.className = "btn";
+        btn.innerText = "Delete";
         cell.appendChild(btn);
     }
 }

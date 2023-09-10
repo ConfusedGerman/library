@@ -1,4 +1,5 @@
 const myLibrary = [];
+const bookCounter = 0;
 
 function Book(title, author, pages, read) {
     this.title = title;

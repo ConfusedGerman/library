@@ -43,13 +43,14 @@ function addBookToLibrary() {
 }
 
 function displayBooks() {
-    if (myLibrary.length < 1) {
-        return;
-    }
-
+    
     let tbody = document.querySelector('tbody');
     // Clear the table before re-populating it
     tbody.innerHTML = '';
+
+    if (myLibrary.length < 1) {
+        return;
+    }
 
     for (let book of myLibrary) {
         let row = tbody.insertRow();

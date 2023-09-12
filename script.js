@@ -71,7 +71,7 @@ function displayBooks() {
                 var readButton = document.createElement('button');
                 readButton.className = 'readButton';
                 readButton.innerText = read.value;
-                btn.setAttribute('data-book-read-number', book.number);
+                readButton.setAttribute('data-book-read-number', book.number);
                 cell.appendChild(readButton);
             }
             else if (key === "title" || key === "author" || key === "pages") {
@@ -106,6 +106,9 @@ function changeStatus() {
     const readBtns = document.querySelectorAll('.readButton');
     readBtns.forEach((button) => 
     button.addEventListener('click', () => {
-        button.isRead();
+        let n = button.getAttribute('data-book-read-number');
+        n = parseInt(n);
+        let position = myLibrary.findIndex(obj => obj.number === n);
+        myLibrary[position].isRead();
     }))
 }

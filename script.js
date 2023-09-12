@@ -102,7 +102,7 @@ function deleteBook() {
 }
 
 function changeStatus() {
-    const readBtns = document.querySelectorAll('.readButtons');
+    const readBtns = document.querySelectorAll('.readButton');
     readBtns.forEach((button) => 
     button.addEventListener('click', () => {
         Book.isRead();

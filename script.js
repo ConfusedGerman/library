@@ -10,7 +10,10 @@ function Book(title, author, pages, read, number) {
 }
 
 Book.prototype.isRead = function() {
-    
+    if (this.read === "read") {
+        this.read = "Not read"
+    }
+    this.read = "read"
 }
 
 function buttons() {

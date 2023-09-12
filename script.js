@@ -73,7 +73,7 @@ function displayBooks() {
                 readButton.innerText = read.value;
                 cell.appendChild(readButton);
             }
-            if (book.hasOwnProperty(key)) {
+            else if (key === "title" || key === "author" || key === "pages") {
                 let cell = row.insertCell();
                 cell.appendChild(document.createTextNode(book[key]));
             }

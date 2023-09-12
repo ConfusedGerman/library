@@ -72,7 +72,7 @@ function displayBooks() {
                 let cell = row.insertCell();
                 var readButton = document.createElement('button');
                 readButton.className = 'readButton';
-                readButton.innerText = read.value;
+                readButton.innerText = book.read;
                 readButton.setAttribute('data-book-read-number', book.number);
                 cell.appendChild(readButton);
             }

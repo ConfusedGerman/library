@@ -84,5 +84,3 @@ function deleteBook() {
         displayBooks();
     }));
 }
-//remove array object via its positon by using the position-number as data-attribute on dinamically created buttons
-//I think it is allowed to assume that the array is empty at the start

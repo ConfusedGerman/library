@@ -16,6 +16,7 @@ Book.prototype.isRead = function() {
     else {
         this.read = "read"
     }
+    displayBooks();
 }
 
 function buttons() {

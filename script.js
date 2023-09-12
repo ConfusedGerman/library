@@ -78,7 +78,9 @@ function deleteBook() {
     deleteBtns.forEach((button) => 
         button.addEventListener('click', () => {
         let n = button.getAttribute('data-book-number');
-        const remove = myLibrary.splice(n, 1);
+        n = parseInt(n);
+        let position = myLibrary.findIndex(obj => obj.number === n);
+        const remove = myLibrary.splice(position, 1);
         displayBooks();
     }));
 }

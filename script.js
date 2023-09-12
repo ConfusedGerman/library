@@ -66,6 +66,13 @@ function displayBooks() {
             if (key === "number") {
                 continue;
             }
+            else if (key === "read") {
+                let cell = row.insertCell();
+                var readButton = document.createElement('button');
+                readButton.className = 'readButton';
+                readButton.innerText = read.value;
+                cell.appendChild(readButton);
+            }
             if (book.hasOwnProperty(key)) {
                 let cell = row.insertCell();
                 cell.appendChild(document.createTextNode(book[key]));

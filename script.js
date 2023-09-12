@@ -86,6 +86,7 @@ function displayBooks() {
         cell.appendChild(btn);
     }
     deleteBook();
+    changeStatus();
 }
 
 function deleteBook() {

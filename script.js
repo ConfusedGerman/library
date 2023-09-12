@@ -43,7 +43,7 @@ function addBookToLibrary() {
 }
 
 function displayBooks() {
-    
+
     let tbody = document.querySelector('tbody');
     // Clear the table before re-populating it
     tbody.innerHTML = '';
@@ -74,12 +74,13 @@ function displayBooks() {
 }
 
 function deleteBook() {
-    deleteBtn = document.querySelector('.btn');
-    deleteBtn.addEventListener('click', () => {
-        let n = deleteBtn.getAttribute('data-book-numer');
+    const deleteBtns = document.querySelectorAll('.btn');
+    deleteBtns.forEach((buttons, index) => 
+        buttons.addEventListener('click', () => {
+        let n = buttons.getAttribute('data-book-numer');
         const remove = myLibrary.splice(n, 1);
         displayBooks();
-    })
+    }));
 }
 //remove array object via its positon by using the position-number as data-attribute on dinamically created buttons
 //I think it is allowed to assume that the array is empty at the start

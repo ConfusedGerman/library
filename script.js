@@ -13,7 +13,9 @@ Book.prototype.isRead = function() {
     if (this.read === "read") {
         this.read = "Not read"
     }
-    this.read = "read"
+    else {
+        this.read = "read"
+    }
 }
 
 function buttons() {

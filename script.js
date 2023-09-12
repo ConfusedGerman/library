@@ -80,7 +80,7 @@ function deleteBook() {
         let n = button.getAttribute('data-book-number');
         n = parseInt(n);
         let position = myLibrary.findIndex(obj => obj.number === n);
-        const remove = myLibrary.splice(position, 1);
+        myLibrary.splice(position, 1);
         displayBooks();
     }));
 }

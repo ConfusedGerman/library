@@ -69,15 +69,15 @@ function displayBooks() {
         btn.innerText = "Delete";
         btn.setAttribute('data-book-number', book.number);
         cell.appendChild(btn);
-        deleteBook();
     }
+    deleteBook();
 }
 
 function deleteBook() {
     const deleteBtns = document.querySelectorAll('.btn');
-    deleteBtns.forEach((buttons, index) => 
-        buttons.addEventListener('click', () => {
-        let n = buttons.getAttribute('data-book-numer');
+    deleteBtns.forEach((button) => 
+        button.addEventListener('click', () => {
+        let n = button.getAttribute('data-book-number');
         const remove = myLibrary.splice(n, 1);
         displayBooks();
     }));

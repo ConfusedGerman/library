@@ -27,7 +27,7 @@ function buttons() {
     const submitButton = document.getElementById('submitForm');
     submitButton.addEventListener("click", () => {
         addBookToLibrary();
-        dialog.close(); // Close the dialog after adding a book
+        dialog.close();
     });
 }
 

@@ -99,3 +99,11 @@ function deleteBook() {
         displayBooks();
     }));
 }
+
+function changeStatus() {
+    const readBtns = document.querySelectorAll('.readButtons');
+    readBtns.forEach((button) => 
+    button.addEventListener('click', () => {
+        Book.isRead();
+    }))
+}

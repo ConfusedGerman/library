@@ -9,6 +9,10 @@ function Book(title, author, pages, read, number) {
     this.number = number;
 }
 
+Book.prototype.isRead = function() {
+    
+}
+
 function buttons() {
     const dialog = document.getElementById('dialog');
     const addBookButton = document.getElementById('addBook');

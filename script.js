@@ -40,6 +40,7 @@ function addBookToLibrary() {
     let pagesInput = form.pages.value;
     let readInput = form.status.value;
     let number = bookCounter;
+    //Give every book a unique number to identify it
     bookCounter += 1;
     const usersBook = new Book(titleInput, authorInput, pagesInput, readInput, number);
     myLibrary.push(usersBook);

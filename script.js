@@ -27,8 +27,9 @@ function buttons() {
         dialog.showModal();
     });
 
-    const submitButton = document.getElementById('submitForm');
-    submitButton.addEventListener("submit", () => {
+    const form = document.getElementById('submitForm');
+    form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent the default form submission behavior
         addBookToLibrary();
         dialog.close();
     });

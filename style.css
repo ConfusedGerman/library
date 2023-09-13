@@ -8,3 +8,17 @@ body {
     justify-items: center;
     row-gap: 50px;
 }
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    max-width: 1500px;
+    border-collapse: collapse;
+    border: 3px solid black;
+    text-align: left;
+}
+
+th,
+td {
+    padding-left: 25px;
+}

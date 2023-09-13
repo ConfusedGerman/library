@@ -28,7 +28,7 @@ function buttons() {
     });
 
     const submitButton = document.getElementById('submitForm');
-    submitButton.addEventListener("click", () => {
+    submitButton.addEventListener("submit", () => {
         addBookToLibrary();
         dialog.close();
     });

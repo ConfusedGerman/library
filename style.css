@@ -21,6 +21,7 @@ th,
 td {
     padding-left: 25px;
     border: 3px solid black;
+    padding: 10px;
 }
 
 .tableButton,
@@ -45,5 +46,4 @@ td {
     padding: 5px;
     min-height: 15px;
     min-width: 60px;
-    margin: 10px;
 }

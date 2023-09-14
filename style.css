@@ -41,7 +41,8 @@ td {
     font-weight: bold;
   }
 
-  #addBook:hover {
+  #addBook:hover,
+  .tableButton:hover {
     background-color: #9ca3af;
     transition: 0.4s;
 }

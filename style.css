@@ -37,3 +37,14 @@ td {
     background-color: #9ca3af;
     transition: 0.4s;
 }
+
+.tableButton {
+    border-radius: 10px;
+    padding: 5px;
+    min-height: 15px;
+    min-width: 60px;
+    border: none;
+    background-color: #4b5563;
+    color: #fff;
+    margin: 10px;
+}

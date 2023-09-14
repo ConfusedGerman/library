@@ -73,9 +73,10 @@ function displayBooks() {
             else if (key === "read") {
                 let cell = row.insertCell();
                 var readButton = document.createElement('button');
-                readButton.className = 'readButton';
+                readButton.className = 'readButton'; //Not needed?
                 readButton.innerText = book.read;
                 readButton.setAttribute('data-book-read-number', book.number);
+                readButton.classList.add('tableButton');
                 cell.appendChild(readButton);
             }
             else if (key === "title" || key === "author" || key === "pages") {
@@ -85,9 +86,10 @@ function displayBooks() {
         }
         let cell = row.insertCell();
         var btn = document.createElement('button')
-        btn.className = "btn";
+        btn.className = "btn"; //Not needed?
         btn.innerText = "Delete";
         btn.setAttribute('data-book-number', book.number);
+        btn.classList.add('tableButton');
         cell.appendChild(btn);
     }
     deleteBook();

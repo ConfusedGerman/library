@@ -23,11 +23,14 @@ td {
     border: 3px solid black;
 }
 
-#addBook {
+#addBook,
+#tableButton {
     background-color: #4b5563;
     color: #fff;
-    border:none; 
+    border:none;
     border-radius:10px; 
+}
+#addBook {
     padding:15px;
     min-height:30px; 
     min-width: 120px;
@@ -39,12 +42,8 @@ td {
 }
 
 .tableButton {
-    border-radius: 10px;
     padding: 5px;
     min-height: 15px;
     min-width: 60px;
-    border: none;
-    background-color: #4b5563;
-    color: #fff;
     margin: 10px;
 }

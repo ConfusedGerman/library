@@ -23,8 +23,8 @@ td {
     border: 3px solid black;
 }
 
-#addBook,
-#tableButton {
+.tableButton,
+#addBook {
     background-color: #4b5563;
     color: #fff;
     border:none;
